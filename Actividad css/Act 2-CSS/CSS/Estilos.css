@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #076896;
+    --primary-color-transparencia: #07689677;
+    --boton-activo: #004466;
+    --color-fondo_caja: #eaf6fb;
+    --color-borde_caja: #006699;
+
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.4;
+}
+
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto ;
+}
+ 
+
+
+header {
+    background-color: #076896;
+    color: white;
+    text-align: center;
+    border-bottom: 8px;
+    border-radius: 0px 0 4px 4px;
+    padding-top: 0.5px;
+    box-shadow:  0rem 0.2rem 0.5rem black; /*Para poner sombra*/
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5rem;   
+    padding: 0.3rem 0.6rem;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /*Color de fondo de los enlaces de navegacion en blanco semitransparente*/
+
+}
+
+section { /*Estilos a las secciones*/
+    background-color: white;
+    box-shadow: 0px 2px 4px black; /*Para poner sombra*/
+    border-radius: 8px;  /*Borde redondeado de las secciones*/
+    margin: 1rem 0; 
+    padding: 1rem;
+}
+
+section h2 {
+    color: #006699;
+    margin-bottom: 0.5rem;
+}
+
+/* Pseudoclases*/
+.btn, btn-sec {
+    /*border: 2px solid #006699;*/
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+    margin: 0.3rem 0.3rem 0.5rem 0;
+    color: var(--primary-color);
+    text-decoration: none;
+    cursor: pointer;
+}
+.btn:hover, .btn-sec:hover  {
+    background-color: var(--primary-color-transparencia);
+    transition: background-color 0.5s;
+}
+
+.btn:active, .btn-sec:active  {
+    background-color: var(--boton-activo);
+}
+
+input {
+    border: 1px solid #999;
+    padding: 0.3rem;
+    margin-top: 0.3rem;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+/* Estilos para la lista*/
+.lista-demo {
+    margin-top: 0.8rem;
+    padding-left: 1.2rem;
+}
+
+.lista-demo li {
+    margin: 0.2rem 0;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.lista-demo li:first-child {
+    font-weight: bold;
+    color: var(--boton-activo);
+    opacity: 1;
+}
+
+.lista-demo li:hover {
+    opacity: 1;
+}
+
+/*Caja (.caja): 
+Fondo azul calro (#eaff6fb)
+Border 3px solido (#006699)
+con 1 rem de margen
+y 1rem de relleno */
+
+.caja {
+    background-color: var(--color-fondo_caja);
+    border: 3px solid var(--color-borde_caja);
+    border-radius: 8px;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+/* span es hijo directo de #contenedor
+fondo azul muy claro (#d0f0f5),
+border 1px solido #006699
+relleno 0.3rem
+margen inferior 3rem */
+#contenedor > span {
+    /*inline-block: Para que podamos ponerle margen -propiedades de 
+    background-color: var(--color-fondo_caja);
+    border: 1px solid var(--color-borde_caja);
+    padding: 0.3rem;
+    margin-bottom: 0.3rem; /*Margen inferior*/
+}
+
+211

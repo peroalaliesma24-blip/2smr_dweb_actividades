@@ -1,0 +1,24 @@
+body { /* Color de la pagina gris */
+    background-color: lightgrey;
+    font-family: sans-serif, Arial, Arial, Helvetica;
+    margin: 10px;
+}
+h1 {
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 300%;
+}
+
+h2 {
+    clear: both;
+}
+
+img {
+    float: left;
+}
+p {
+    margin-left: 10px;
+    float: right;
+    
+    
+}
