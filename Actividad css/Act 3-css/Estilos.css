@@ -6,6 +6,9 @@
     --color_fondo_menú_nav: #f1b4b8;
     --color_títulos: #2d07fb;
     --color_border_discontinuo: #ff9e26;
+    --color_fondo_enlace_selec: #eeeeee; 
+    --color_enlace_seleccionado: #ff0000;
+    --color_texto: #008000; 
 }
 
 body {
@@ -33,15 +36,20 @@ header nav { /* Menú de la navegación de la cabecera */
 }
 
 header nav ul {
-    padding-left: 20px; /* Cambio de relleno de bloque lista */
+    padding-left: 0px; /* Cambio de relleno de bloque lista */
 }
 
 header nav li {
     list-style-type: none; /* Quitamos el punto de la viñeta*/
     float: left;
-    margin-right: 20px;
     margin-left: 0;
-    padding: 16px 0 16px 8px;
+    padding: 16px 10px 16px 10px;
+}
+
+header nav li:hover { /* Cambio de fondo y color de fouente al pasar el cursor por encima */
+    background-color: var(--color_fondo_enlace_selec);
+    color: var(--color_enlace_seleccionado);
+    transition: background-color 0.3s;
 }
 
 /*Enlaces de la barra de navegación sin subrayar */
@@ -58,4 +66,36 @@ header nav::after {
 #destacado {
     border: dashed 2px var(--color_border_discontinuo); /*Borde líneas discontínuas color naranja*/
     padding: 10px;
+}
+
+.centrado {
+    position: absolute;
+    margin-top: 80px;
+}
+
+.caja{
+    border: solid var(--color_títulos);
+    padding: 10px 20px 0 10px;
+    margin: 10px;
+}
+
+.caja:last-child {
+    border: solid var(--color_títulos);
+
+}
+.caja p:first-child { /* Pseudoselector: primer párrafo dentro de .caja */
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--color_texto);
+}
+
+.caja p:nth-of-type(2) {  /* Segundo párrafo dentro de la caja */
+    clear: both; /* fuerza a empezar debajo del flotado anterior */
+    padding: 5px;
+    color: var(--color_texto)
+}
+
+.caja p:nth-of-type(3) {
+    clear: both;
+    color: var(--color_texto);
 }
