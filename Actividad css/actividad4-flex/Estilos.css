@@ -1,0 +1,93 @@
+/* vamos a crear una variable desde la pseudoclase root para poder acceder a
+estas variable desde caulquier parte del ducumento */
+:root{
+    --pading-container: 50px 0; /* arriba y abajo 100px, izquierda y derecha 0 */
+}
+/* reseteo de margenes y paddings y box-sizing para que el padding y border se
+incluyan dentro del width y height */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Es el contenedor de la página */
+.mi_contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centramos verticalmente el contenedor */
+    overflow: hidden; /* Para que no se salga nada del contenedor, si se sale se esconde */
+    padding: var(--pading-container);
+    /* background-color: black */
+}
+
+.mi_menu {
+    background: rgba(0,0,0,0.5);
+    display: flex; /* activamos flexbox */
+    flex-flow: row nowrap; /* alineamos los elementos verticalmente al centro */
+    height: 100px;
+    align-items: center; /* alineamos los eleventos verticalente al centro */
+    --padding-container: 0; /* anulamos el padding del contenedor solo para el menu */
+}
+
+.logo {
+    flex: 0 1 auto; /* el logo ocupa su espacio natural */
+    max-width: 90px; /* maximo ancho del logo */
+    min-width: 60px;
+    margin-left: 0;
+}
+.menu_nav {
+    flex: 2 1 70%; /* el menu ocupa del espacio disponible */
+    display: flex;
+    justify-content: space-evenly; /* distribuimos los elementos del menu equivalente */
+}
+.menu_nav a {
+    text-decoration: none;
+    color: white;
+}
+.menu_social {
+    flex: 2 1 70%; /* el menu ocupa 70% del espacio disponible */
+    display: flex;
+    justify-content: space-evenly; /* distribuimos los elementos del menu social con espacio alrededor */
+}
+.menu_social a img {
+    width: 32px;
+    min-width: 28%;
+}
+
+.mi_header {
+    width: 100%;
+    height: 100vh; /* altura de la ventana del navegador 100vh = full height of the viewport */
+    min-height: 600px;
+    max-height: 800px;
+        position: relative;
+}
+
+.mi_header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background-image: linear-gradient(
+            180deg,
+            rgba(0,0,00.25) 0%,
+            rgba(0,0,0,0.5) 0%
+        ),
+        url("../actividad4-flex/img/fondo_header.jpg");
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 85%, 50% 95%, 0 85% 0 0);
+    z-index: -1;
+}
+
+.mi__nav a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.header_container {
+    height: 75%;
+    display: flex;
+    flex-direction: column; 
+}

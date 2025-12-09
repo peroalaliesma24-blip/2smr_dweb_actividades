@@ -12,14 +12,13 @@
 }
 
 body {
+    width: 80%;
     box-sizing: border-box; /* Hace que las propiedades widht y height incluyen el borde y el relleno. */
     margin: 0 auto; /* Para centrar contenedores en la página horizontalmente*/
     background-color: var(--color_fondo_principal);
 }
 
-header,main,footer {
-    max-width: 600px;
-}
+
 
 header h1 {
     font-family: AudioWide; /* Fuente AudioWide para los h1 dentro de la cabecera */
@@ -64,38 +63,54 @@ header nav::after {
 }
 
 #destacado {
-    border: dashed 2px var(--color_border_discontinuo); /*Borde líneas discontínuas color naranja*/
+    border-style: dashed 2px var(--color_border_discontinuo); /*Borde líneas discontínuas color naranja*/
+    border-color: blue;
     padding: 10px;
+    background-color: #ffffcc;
 }
 
 .centrado {
-    position: absolute;
-    margin-top: 80px;
+    margin: 0 auto;
+    display: inline-block;
 }
 
-.caja{
-    border: solid var(--color_títulos);
-    padding: 10px 20px 0 10px;
-    margin: 10px;
+.caja {
+    border: solid 2px blue;
+    display: inline-block;
+    margin: 15px;
+    vertical-align: middle; /* Sirve para poner la caja centrada */
+    color: green;
+    padding: 15px;    
 }
 
-.caja:last-child {
-    border: solid var(--color_títulos);
-
+.caja img {
+    width: 100px;
 }
-.caja p:first-child { /* Pseudoselector: primer párrafo dentro de .caja */
+
+.caja p:first-child {
     font-weight: bold;
     text-decoration: underline;
-    color: var(--color_texto);
 }
 
-.caja p:nth-of-type(2) {  /* Segundo párrafo dentro de la caja */
-    clear: both; /* fuerza a empezar debajo del flotado anterior */
-    padding: 5px;
-    color: var(--color_texto)
+.izquierda {
+    float: left;
 }
 
-.caja p:nth-of-type(3) {
+.caja p:nth-of-type(2) {
     clear: both;
-    color: var(--color_texto);
+    padding: 5px;
+}
+
+.derecha {
+    float: right;
+    margin-right: 15px;
+}
+
+footer p:last-child {
+    font-style: italic;
+    color: gray;
+}
+
+aside {
+    float: right;
 }
